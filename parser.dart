@@ -1,4 +1,5 @@
 import 'case/rule.dart';
+import 'color.dart';
 
 class Parser {
   final Rule instance;
@@ -14,10 +15,10 @@ class Parser {
   }
 
   void display() {
-    print(this.exec());
+	print('${STDO_GREEN}Output : ${exec()}${STDO_END}');
   }
 
   String exec() {
-    return instance.parse(this.words);
+    return instance.parse(words);
   }
 }
